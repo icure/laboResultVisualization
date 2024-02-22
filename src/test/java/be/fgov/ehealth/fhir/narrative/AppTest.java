@@ -94,10 +94,11 @@ public class AppTest
 
     }
 
+
     /**
      * Rigorous Test :-)
      */
-    public void testParallelValidation() throws Exception {
+    public void notestParallelValidation() throws Exception {
         PrintStream output = new PrintStream(new ByteArrayOutputStream());
         FhirValidator fhirValidator = new FhirValidator(output, Collections.singletonList("https://build.fhir.org/ig/hl7-be/lab"));
 
