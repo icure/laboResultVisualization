@@ -11,9 +11,9 @@
     </properties>
     <distributionManagement>
         <repository>
-            <id>github</id>
-            <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/icure/laboResultVisualization</url>
+            <id>taktik</id>
+            <name>Taktik Nexus</name>
+            <url>https://maven.taktik.be/content/groups/public</url>
         </repository>
     </distributionManagement>
     <build>
