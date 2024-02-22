@@ -56,7 +56,8 @@ public class AppTest
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         //App.commandLine(new String[] {"html", "src/test/resources/Bundle-hematologyStudiesAsBundleCollection.xml", "lab", "-d"}, new PrintStream(bos));
         //App.commandLine(new String[] {"html", "src/test/resources/example5.json", "immunization", "-d"}, new PrintStream(bos));
-        App.commandLine(new String[] {"html", "src/test/resources/81365677998_815333041_13.json", "lab", "-d"}, new PrintStream(bos));
+        //App.commandLine(new String[] {"html", "src/test/resources/81365677998_815333041_13.json", "lab", "-d"}, new PrintStream(bos));
+        App.commandLine(new String[] {"html", "src/test/resources/example.json", "lab", "-d"}, new PrintStream(bos));
         //App.commandLine(new String[] {"html", "src/test/resources/Bundle-hematologyStudiesAsBundleCollection.xml", "lab", "-d"}, new PrintStream(bos));
         //App.commandLine(new String[] {"html", "C:\\Users\\eh068\\Documents\\Bundle-hematologyStudiesAsBundleCollection.xml", "lab", "-d"}, new PrintStream(bos));
         //App.commandLine(new String[] {"html", "C:\\Users\\eh068\\Documents\\Immunization5.json", "immunization", "-d"}, new PrintStream(bos));
@@ -66,7 +67,7 @@ public class AppTest
 
         System.out.println("result: " + result);
 
-        createFile("C:\\Users\\eh068\\Documents\\LaboResultVisualizer\\laboResultVisualization\\TestVisu2.html", result);
+        //createFile("C:\\Users\\eh068\\Documents\\LaboResultVisualizer\\laboResultVisualization\\TestVisu2.html", result);
 
         assertTrue( result.contains("<html") );
     }
@@ -124,7 +125,7 @@ public class AppTest
      */
     public void testAppWithHtmlGenerationAndValidation() {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        App.commandLine(new String[] {"--validate=https://build.fhir.org/ig/hl7-be/lab", "html", "src/test/resources/example.json"}, new PrintStream(bos));
+        App.commandLine(new String[] {"--validate=https://build.fhir.org/ig/hl7-be/lab", "html", "src/test/resources/example.json", "lab"}, new PrintStream(bos));
 
         String result = new String(bos.toByteArray(), StandardCharsets.UTF_8);
 
@@ -144,7 +145,7 @@ public class AppTest
 
                     System.out.println("Converting "+absolutePath);
 
-                    App.commandLine(new String[] {"html", absolutePath.toString()}, new PrintStream(bos));
+                    App.commandLine(new String[] {"html", absolutePath.toString(), "lab"}, new PrintStream(bos));
 
                     byte[] bytes = bos.toByteArray();
                     String result = new String(bytes, StandardCharsets.UTF_8);
@@ -164,7 +165,7 @@ public class AppTest
      */
     public void testAppWithFhirGeneration() {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        App.commandLine(new String[] {"embed", "src/test/resources/example.json"}, new PrintStream(bos));
+        App.commandLine(new String[] {"embed", "src/test/resources/example.json", "lab"}, new PrintStream(bos));
 
         String result = new String(bos.toByteArray(), StandardCharsets.UTF_8);
 
