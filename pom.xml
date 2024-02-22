@@ -4,7 +4,7 @@
     <groupId>be.fgov.ehealth</groupId>
     <artifactId>fhir-visualization-tool</artifactId>
     <packaging>jar</packaging>
-    <version>1.15</version>
+    <version>1.16</version>
     <properties>
         <!-- github server corresponds to entry in ~/.m2/settings.xml -->
         <github.global.server>github</github.global.server>
