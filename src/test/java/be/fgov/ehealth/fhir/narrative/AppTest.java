@@ -57,7 +57,7 @@ public class AppTest
         //App.commandLine(new String[] {"html", "src/test/resources/Bundle-hematologyStudiesAsBundleCollection.xml", "lab", "-d"}, new PrintStream(bos));
         //App.commandLine(new String[] {"html", "src/test/resources/example5.json", "immunization", "-d"}, new PrintStream(bos));
         //App.commandLine(new String[] {"html", "src/test/resources/81365677998_815333041_13.json", "lab", "-d"}, new PrintStream(bos));
-        App.commandLine(new String[] {"html", "src/test/resources/example.json", "lab", "-d"}, new PrintStream(bos));
+        App.commandLine(new String[] {"html", "src/test/resources/example.json", "lab"}, new PrintStream(bos));
         //App.commandLine(new String[] {"html", "src/test/resources/Bundle-hematologyStudiesAsBundleCollection.xml", "lab", "-d"}, new PrintStream(bos));
         //App.commandLine(new String[] {"html", "C:\\Users\\eh068\\Documents\\Bundle-hematologyStudiesAsBundleCollection.xml", "lab", "-d"}, new PrintStream(bos));
         //App.commandLine(new String[] {"html", "C:\\Users\\eh068\\Documents\\Immunization5.json", "immunization", "-d"}, new PrintStream(bos));
